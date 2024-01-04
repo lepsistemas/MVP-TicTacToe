@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ITicTacToeView view = GetComponent<TicTacToeView>();
+        var view = GetComponent<TicTacToeView>();
         if (view != null)
         {
             var model = new TicTacToeModel();

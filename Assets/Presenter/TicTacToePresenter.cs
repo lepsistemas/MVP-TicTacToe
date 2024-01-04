@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class TicTacToePresenter
 {
     
@@ -14,8 +12,7 @@ public class TicTacToePresenter
         UpdatePlayerInfo();
     }
 
-    private void HandleCellClicked(int x, int y) {
-        // Debug.Log($"Cell clicked at: X={x}, Y={y}");
+    public void HandleCellClicked(int x, int y) {
         char currentPlayerSymbol = model.GetCurrentPlayerSymbol();
         if (model.MakeMove(x, y)) {
             view.UpdateCell(x, y, currentPlayerSymbol);
@@ -34,7 +31,7 @@ public class TicTacToePresenter
         }
     }
 
-    private void UpdatePlayerInfo() {
+    public void UpdatePlayerInfo() {
         string info = model.CurrentPlayer == 'X' ? "Player X's Turn" : "Player O's Turn";
         view.UpdatePlayerInfo(info);
     }

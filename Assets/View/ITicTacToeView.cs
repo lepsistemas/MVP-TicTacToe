@@ -8,6 +8,6 @@ public interface ITicTacToeView
     void UpdateCell(int x, int y, char playerSymbol);
     void UpdatePlayerInfo(string info);
     void ShowWinner(char winner);
-
     void ResetBoard();
+    void ExitGame();
 }

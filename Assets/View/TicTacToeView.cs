@@ -71,16 +71,15 @@ public class TicTacToeView : MonoBehaviour, ITicTacToeView
             button.GetComponentInChildren<TextMeshProUGUI>().text = "";
         }
         UpdatePlayerInfo("Player X's Turn");
-        // Reset any other UI elements, like winner info text
         winnerInfoText.text = "";
     }
 
     public void ExitGame()
     {
         #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false; // Exit play mode in the editor
+            UnityEditor.EditorApplication.isPlaying = false;
         #else
-            Application.Quit(); // Quit the application
+            Application.Quit();
         #endif
     }
 }
